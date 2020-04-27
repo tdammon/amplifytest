@@ -6,13 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import {isMobile, isBrowser} from 'react-device-detect';
-import Mobile from "../Mobile/Mobile";
-import MobileServices from "../MobileServices/MobileServices";
-import MobileNavThreeButton from "../MobileNavThreeButton/MobileNavThreeButton";
-import MobileNavFourButton from "../MobileNavFourButton/MobileNavFourButton";
-import MobileNavFiveButton from "../MobileNavFiveButton/MobileNavFiveButton";
-import Desktop from "../Desktop/Desktop";
-import DesignView from "../DesignView/DesignView"
+
 
 
 class App extends Component {
@@ -21,7 +15,7 @@ class App extends Component {
     if(isMobile){
       return(
       <Router>
-        <Switch>
+        {/* <Switch>
         <Route
           exact
           path="/"
@@ -37,19 +31,18 @@ class App extends Component {
           path="/designs"
           component={DesignView}
         />  
-        </Switch>
-        <MobileNavFourButton />
+        </Switch> */}
       </Router>)
     } else if(isBrowser) {
       return (
         <Router>
-          <Switch>
+          {/* <Switch>
           <Route
               exact
               path="/"
               component={Desktop}
             />
-          </Switch>
+          </Switch> */}
         </Router>
       );
     }
